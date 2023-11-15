@@ -1,0 +1,46 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!--Main Content-->
+<main style="background-image: url('Assets/images/pexels-pixabay-355770.jpg'); background-size: cover; background-position: center; height: 91vh;">
+<div class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-11 text-center">
+            <h1>Workout Tracker </h1>   
+            <a href="/worklist/add" class="btn btn-success" 
+            role="button"><i class="fas fa-plus-circle"></i> Add Workout</a>      
+        <br><br>
+        <table class="table table-bordered table-striped table-hover">
+            <tr class="d-flex">
+                <th class="text-center col-2">Workout</th>
+                <th class="text-center col-2">Day</th>
+                <th class="text-center col-1">Sets</th>
+                <th class="text-center col-1">Reps</th>
+                <th class="text-center col-2">Muscles</th>
+            </tr>
+            <% for(let count=0;count<workList.length;count++) { %>    
+            <tr class="d-flex">
+                <td class="text-center col-2"><%= workList[count].Workout %></td>
+                <td class="text-center col-2"><%= workList[count].Day %></td>
+                <td class="text-center col-1"><%= workList[count].Sets %></td>
+                <td class="text-center col-1"><%= workList[count].Reps %></td>
+                <td class="text-center col-2"><%= workList[count].Muscles %></td>
+                <td class="text-center col-1">
+                <a href="/worklist/edit/<%= workList[count]._id %>" class="btn btn-primary btn-sm btn-action">
+                    <i class="fas fa-pencil-alt"></i> Update
+                </a>
+                </td>
+                <td class="text-center col-1">
+                <a href="/worklist/delete/<%= workList[count]._id %>" class="btn btn-danger btn-sm btn-action">
+                    <i class="fas fa-trash-alt"></i> Delete
+                </a>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+    </div>
+</main>
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

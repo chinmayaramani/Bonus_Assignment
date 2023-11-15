@@ -1,0 +1,86 @@
+body, h1, h2, h3, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  #Header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    color: #090909;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Adjusts the z-index to control the stacking order */
+  }
+
+  /* Home Section styles */
+  #Home {
+    text-align: center;
+    padding: 251px 0;     
+    background-size: cover; /* Adjusts the size as needed */
+    background-position: center; /* Adjusts the position as needed */
+    background-repeat: no-repeat;
+    background-image: url('Assets/images/pexels-pixabay-355770.jpg');
+  }
+  
+  #Home h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding-top: 60px; /* Adjust the padding to match the height of your navbar */
+  }
+
+  .btn-action {
+    width: 100%;
+    height: 100%;
+    /* Adjust other styles as needed */
+  }
+
+  /* Footer styles */
+  .navbar.fixed-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px; /* Adjusts the height as needed */
+  }
+
+  .navbar-text {
+    margin: 0; 
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .social-link {
+    margin: 0 10px; /* Adds space on both sides of the link */
+    color: rgb(255, 255, 255); /* Sets link color to white */
+  }
+
+
+

@@ -1,0 +1,76 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="WorkoutTextField">Workout</label>
+                    <input type="text" class="form-control"
+                    id="WorkoutTextField"
+                    placeholder="Enter your Workout"
+                    name="Workout"
+                    value="<%= work.Workout %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="DayTextField">Day</label>
+                    <input type="text" class="form-control"
+                    id="DayTextField"
+                    placeholder="Enter your Day"
+                    name="Day" 
+                    value="<%= work.Day %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="SetsTextField">Sets</label>
+                    <input type="text" class="form-control"
+                    id="SetsTextField"
+                    placeholder="Enter your Sets"
+                    name="Sets" 
+                    value="<%= work.Sets %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="RepsTextField">Reps</label>
+                    <input type="text" class="form-control"
+                    id="RepsTextField"
+                    placeholder="Enter your Reps"
+                    name="Reps" 
+                    value="<%= work.Reps %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="MusclesTextField">Muscles</label>
+                    <input type="text" class="form-control"
+                    id="MusclesTextField"
+                    placeholder="Enter your Muscle Target"
+                    name="Muscles" 
+                    value="<%= work.Muscles %>"
+                    required>
+                </div>
+
+                <br>
+
+                <button class="btn btn-primary" type="submit">
+                <i class="fas fa-edit"></i> Submit</button>
+                
+                <a href="/worklist" class="btn btn-warning">
+                <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<% include ../partials/bottom_nav.ejs %>
+<% include ../partials/footer.ejs %>
