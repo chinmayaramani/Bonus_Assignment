@@ -1,5 +1,5 @@
 // Exporting a configuration object for MongoDB connection
 module.exports =
 {
-    "URI": "mongodb://127.0.0.1:27017/workOut"
+    "URI": "mongodb+srv://Chinmayaramani:Chsh43ra@mongodbserver.ambl0tp.mongodb.net/workOut"
 }
