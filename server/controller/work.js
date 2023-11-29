@@ -2,6 +2,7 @@ var express = require('express');
 const Work = require('../models/work'); 
 var router = express.Router();
 
+
 // CRUD --> Create, Read, Update, Delete
 
 module.exports.displayworkList = async (req, res, next) => {
@@ -9,7 +10,8 @@ module.exports.displayworkList = async (req, res, next) => {
         const workList = await Work.find();
         res.render('work/list', {
             title: 'Public',
-            workList: workList
+            workList: workList,
+            displayName: req.user ? req.user.displayName:''
         });
     } catch (error) {
         console.error(error);
@@ -22,7 +24,8 @@ module.exports.displayworkList = async (req, res, next) => {
 module.exports.displayAddPage = (req, res, next) => {
     try {
         res.render('work/add', {
-            title: 'Add Workout'
+            title: 'Add Workout',
+            displayName: req.user ? req.user.displayName:''
         });
     } catch (error) {
         console.error(error);
@@ -58,6 +61,7 @@ module.exports.displayEditPage = async (req, res, next) => {
         const work = await Work.findById(req.params.id);
         res.render('work/edit', {
             title: 'Edit Workout',
+            displayName: req.user ? req.user.displayName:'',
             work: work
         });
     } catch (error) {
